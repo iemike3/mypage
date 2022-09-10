@@ -16,6 +16,10 @@
     background-color: #ffffff9f;
 }
 
+.dark .main .top_background .box {
+    background-color: #0000009f;
+}
+
 .main .top_background .box .container {
     padding-left: 40px;
     padding-right: 40px;
@@ -25,12 +29,22 @@
     margin-bottom: 20px;
     font-size: 3rem;
     font-weight: 900;
+    color: black;
+}
+
+.dark .main .top_background .box .container .title {
+    color: white;
 }
 
 .main .top_background .box .container .text {
     margin-bottom: 30px;
     font-size: 1.1rem;
     font-weight: bold;
+    color: black;
+}
+
+.dark .main .top_background .box .container .text {
+    color: white;
 }
 
 .main .top_background .box .container .btn {
@@ -49,10 +63,21 @@
     color: black;
 }
 
+.dark .main .top_background .box .container .btn.type1 {
+    border: 2px solid white;
+    color: white;
+}
+
 .main .top_background .box .container .btn.type2 {
     border: 2px solid black;
     background-color: black;
     color: white;
+}
+
+.dark .main .top_background .box .container .btn.type2 {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
 }
 
 @media screen and (max-width: 479px) {
