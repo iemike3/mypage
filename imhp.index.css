@@ -57,7 +57,7 @@
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 300ms, color 300ms;
+    transition: background-color 300ms, color 300ms, border-color 300ms;
 }
 
 .main .top_background .box .container .btn.type1 {
