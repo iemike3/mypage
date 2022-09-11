@@ -12,19 +12,6 @@
     background-color: #8080807e;
 }
 
-*::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-}
-
-*::-webkit-scrollbar-track {
-    background: #ffffff00;
-}
-
-*::-webkit-scrollbar-thumb {
-    background: #333333;
-}
-
 body {
     background-color: white;
     transition: background-color 300ms;
