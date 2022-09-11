@@ -25,6 +25,15 @@
     background: #333333;
 }
 
+body {
+    background-color: white;
+    transition: background-color 300ms;
+}
+
+body.dark {
+    background-color: #1d1d1d;
+}
+
 .header {
     width: 100%;
     height: 100px;
@@ -47,10 +56,12 @@
 }
 
 .header .right_items {
+    display: flex;
     margin-left: auto;
 }
 
 .header .right_items .item {
+    display: block;
     margin-left: 15px;
     font-size: 1.2rem;
     font-weight: 800;
@@ -74,6 +85,50 @@
     color: #dfdfdf;
 }
 
+.header .right_items .item .darkmode_switch {
+    width: 60px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    background-color: transparent;
+    transition: border 300ms;
+}
+
+.dark .header .right_items .item .darkmode_switch {
+    border: 2px solid white;
+}
+
+.header .right_items .item .darkmode_switch:hover {
+    color: black;
+}
+
+.header .right_items .item .darkmode_switch input {
+    display: none;
+}
+
+.header .right_items .item .darkmode_switch .s1 {
+    width: 56px;
+    height: 24px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    transition: color 300ms;
+}
+
+.header .right_items .item .darkmode_switch .s1::after {
+    content: "OFF"
+}
+
+.header .right_items .item .darkmode_switch input:checked + .s1 {
+    color: white;
+}
+
+.header .right_items .item .darkmode_switch input:checked + .s1::after {
+    content: "ON";
+}
+
 .header .menu_btn {
     margin-left: 15px;
     cursor: pointer;
@@ -86,6 +141,7 @@
 .header .menu_btn .material-symbols-outlined {
     color: black;
     font-size: 2rem;
+    transition: color 300ms;
 }
 
 .dark .header .menu_btn .material-symbols-outlined {
@@ -116,7 +172,7 @@
     height: 100%;
     margin-left: 100%;
     background-color: #ffffff;
-    transition: margin 500ms;
+    transition: margin 500ms, background-color 300ms;
 }
 
 .dark .pmenu .container {
@@ -147,11 +203,60 @@
     font-weight: bold;
     text-decoration: none;
     color: black;
+    transition: color 300ms;
 }
 
 
 .dark .pmenu .container .items .item {
     color: white;
+}
+
+
+.pmenu .container .items .item .darkmode_switch {
+    width: 60px;
+    height: 28px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    background-color: transparent;
+    transition: border-color 300ms;
+}
+
+.dark .pmenu .container .items .item .darkmode_switch {
+    border: 2px solid white;
+}
+
+.pmenu .container .items .item .darkmode_switch:hover {
+    color: black;
+}
+
+.pmenu .container .items .item .darkmode_switch input {
+    display: none;
+}
+
+.pmenu .container .items .item .darkmode_switch .s1 {
+    width: 56px;
+    height: 24px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: color 300ms, background-color 300ms;
+}
+
+.pmenu .container .items .item .darkmode_switch .s1::after {
+    content: "OFF"
+}
+
+.pmenu .container .items .item .darkmode_switch input:checked + .s1 {
+    background-color: #252525;
+    color: white;
+}
+
+.pmenu .container .items .item .darkmode_switch input:checked + .s1::after {
+    content: "ON";
 }
 
 @media screen and (max-width: 767px) {
